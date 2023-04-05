@@ -1,0 +1,77 @@
+baseURL: /
+title: aron.day
+paginate: 5
+theme: charlolamode
+
+
+
+menu:
+    main:
+        - name: Contact
+          url: /contact/
+          weight: 30
+        - name: Articles
+          url: /articles/
+          weight: 20
+        # - name: Projects
+        #   url: /projects/
+        #   weight: 15
+   
+params:
+    author: Aron Day
+
+
+    defaultTheme: auto
+    # disableThemeToggle: true
+    ShowShareButtons: true
+    ShowReadingTime: true
+    displayFullLangName: true
+    ShowBreadCrumbs: true
+    ShowCodeCopyButtons: true
+    ShowToc: true
+
+    profileMode:
+        # Disable to populate home page with 'mainSections' content
+        enabled: true
+        title: Aron Day
+        description: |
+
+          Hello, I am Aron.
+           I am a Solution Architect. 
+        
+
+        imageUrl: "img/avatar.jpg"
+        imageTitle: my image
+        # imageWidth: 120
+        # imageHeight: 120
+        buttons:
+            - name: Don't click me
+              url: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+    mainSections:
+      - articles
+
+    socialIcons:
+        - name: github
+          url: "https://github.com/aronday"
+        - name: gitlab
+          url: "https://gitlab.com/aronday"
+        - name: linkedin
+          url: "https://www.linkedin.com/in/aronday/"
+
+    # change favicon in images folder (icon for web tab)
+    assets:
+          favicon: "/images/favicon.ico"
+          favicon16x16: "/images/favicon-16x16.png"
+          favicon32x32: "/images/favicon-32x32.png"
+          apple_touch_icon: "/images/apple-touch-icon.png"
+          safari_pinned_tab: "/images/apple-touch-icon.png"
+
+
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+enableEmoji: true
+pygmentsUseClasses: true
+
+minify:
+    disableXML: true
