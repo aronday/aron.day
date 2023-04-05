@@ -56,7 +56,7 @@ params:
         - name: gitlab
           url: "https://gitlab.com/aronday"
         - name: linkedin
-          url: "https://www.linkedin.com/in/aronday/"
+          url: "https://www.linkedin.com/in/dayaron/"
 
     # change favicon in images folder (icon for web tab)
     assets:
