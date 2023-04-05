@@ -36,9 +36,10 @@ params:
         title: Aron Day
         description: |
 
-          Hello, I am Aron.
-          I'm a Solution Architect at Datadog! 
-        
+          Howdy, I'm Aron.
+          I'm a Solution Architect living in Dublin! 
+
+          #test
 
         imageUrl: "img/avatar.jpg"
         imageTitle: my image
