@@ -10,9 +10,9 @@ menu:
         - name: Contact
           url: /contact/
           weight: 30
-        - name: Articles
-          url: /articles/
-          weight: 20
+        # - name: Articles
+        #   url: /articles/
+        #   weight: 20
         # - name: Projects
         #   url: /projects/
         #   weight: 15
@@ -36,10 +36,9 @@ params:
         title: Aron Day
         description: |
 
-          Howdy, I'm Aron.
-          I'm a Solution Architect living in Dublin! 
+          Howya, I'm Aron! </br>
 
-          #test
+          I'm a Solution Architect at Datadog, living in Dublin.
 
         imageUrl: "img/avatar.jpg"
         imageTitle: my image
@@ -52,12 +51,12 @@ params:
       - articles
 
     socialIcons:
+        - name: linkedin
+          url: "https://www.linkedin.com/in/dayaron/"
         - name: github
           url: "https://github.com/aronday"
         - name: gitlab
           url: "https://gitlab.com/aronday"
-        - name: linkedin
-          url: "https://www.linkedin.com/in/dayaron/"
 
     # change favicon in images folder (icon for web tab)
     assets:
