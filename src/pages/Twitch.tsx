@@ -7,38 +7,40 @@ const PARENTS = [
   '127.0.0.1',
   'aron.day',
 ]
-
 const parentsParam = PARENTS.map(p => `parent=${encodeURIComponent(p)}`).join('&')
 
 export default function Twitch() {
   return (
     <div>
-      {/* Hero section with Twitch gradient */}
+      {/* HERO — mirrors Racing page, with Twitch colours */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#9146FF] via-[#A970FF] to-[#B9A3E3]" />
         <div className="absolute inset-0 bg-checkers mix-blend-overlay opacity-20" />
 
-        <div className="relative container px-4 py-16 flex items-center gap-4">
-          {/* 95 badge */}
+        {/* Logo top-right (hide on mobile) */}
+        <div className="hidden md:block absolute top-6 right-6">
           <img
-            src="/95_1.png"
-            alt="Number 95"
-            className="h-12 w-12 object-contain drop-shadow-lg"
+            src="/twitch-logo.png"
+            alt="Twitch Logo"
+            className="h-20 w-auto object-contain drop-shadow-lg"
           />
-          <div>
-            <h1 className="text-3xl md:text-4xl font-extrabold text-white">
-              Live on Twitch
-            </h1>
-            <p className="mt-2 max-w-2xl text-white/90">
-              Catch my streams — sim racing, tech, and the occasional chaos.
-            </p>
-          </div>
+        </div>
+
+        <div className="relative container px-4 py-16">
+          <h1 className="text-3xl md:text-4xl font-extrabold text-white">Live on Twitch</h1>
+          <p className="mt-2 max-w-2xl text-white/90">
+            Catch my streams — sim racing, tech, and the occasional chaos.
+          </p>
+        </div>
+
+        {/* subtle sweep like Racing */}
+        <div className="absolute -bottom-16 -right-16 rotate-12">
+          <div className="h-40 w-[140vw] bg-gradient-to-r from-white/40 to-white/10 opacity-20 blur-2xl" />
         </div>
       </section>
 
-      {/* Content section */}
+      {/* CONTENT */}
       <section className="min-h-[70vh] container px-4 py-8">
-        {/* Player + Chat (responsive) */}
         <div className="mt-6 grid gap-4 md:grid-cols-[1fr,360px]">
           {/* Player */}
           <div className="aspect-video rounded-xl overflow-hidden border border-neutral-800 bg-black">
@@ -64,7 +66,7 @@ export default function Twitch() {
           </div>
         </div>
 
-        {/* Simple schedule / links */}
+        {/* Schedule / Follow */}
         <div className="mt-8 grid gap-4 md:grid-cols-2">
           <div className="rounded-2xl border border-neutral-800 bg-neutral-900/70 p-4">
             <h2 className="text-white font-semibold">Schedule</h2>
