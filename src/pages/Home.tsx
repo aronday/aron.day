@@ -1,5 +1,6 @@
 import React from 'react'
 import { Mail, Github, Linkedin } from 'lucide-react'
+import { Link } from 'react-router-dom';
 
 const PROFILE = {
   name: "Aron Day",
@@ -46,18 +47,18 @@ export default function Home() {
         <a href={PROFILE.github} target="_blank" className="btn btn-ghost">
           <Github className="h-4 w-4" /> GitHub
         </a>
-	  <a
-    href="/racing"
-    className="inline-flex items-center gap-2 rounded-lg px-4 py-2 font-semibold text-white shadow-speed"
-    style={{ backgroundColor: '#D22630' }}
-  >
-    <img
-      src="/95_1.png"
-      alt="Number 95"
-      className="h-5 w-5 object-contain"
-    />
-    Looking for Lightning?
-  </a>
+	  <Link
+        to="/racing"
+        className="inline-flex items-center gap-2 rounded-lg px-4 py-2 font-semibold text-white shadow-speed"
+        style={{ backgroundColor: '#D22630' }}
+      >
+        <img
+          src="/95_1.png"
+          alt="Number 95"
+          className="h-5 w-5 object-contain"
+        />
+        Looking for Lightning?
+      </Link>
       </div>
     </div>
   </div>

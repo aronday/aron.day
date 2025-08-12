@@ -72,12 +72,12 @@ export default function Racing() {
           <div className="flex items-center gap-3 text-white/90">
             <Zap className="h-8 w-8" />
             <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight">
-              Racing — Global GT Lights
+              Racing
             </h1>
           </div>
           <p className="mt-2 max-w-2xl text-white/90">
-            I race in Ireland’s Global Lights series, my car isn’t just quick — it’s Ka-chow! quick.
-Built for speed, built for smiles.
+            I race in Ireland’s Global GT Light series, my car isn’t just quick — it’s Ka-chow! quick.
+            Built for speed, built for smiles.
           </p>
         </div>
         <div className="absolute -bottom-16 -right-16 rotate-12">
