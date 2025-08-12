@@ -15,7 +15,7 @@ export default function Nav() {
     className="h-5 w-5 object-contain"
   />
 </div>
-          <span className="font-semibold">Aron Day | Engineer | Racecar Driver</span>
+          <span className="font-semibold">Aron Day</span>
         </Link>
         <nav className="flex items-center gap-5 text-sm text-neutral-300">
           <Link to="/" className={current === '#/' ? 'text-white' : 'hover:text-white'}>Home</Link>
