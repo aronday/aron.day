@@ -58,32 +58,34 @@ export default function Racing() {
   return (
     <div>
       {/* HERO */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-red-700 via-red-600 to-amber-500" />
-        <div className="absolute inset-0 bg-checkers mix-blend-overlay opacity-30" />
-          <div className="absolute top-6 right-6">
-    <img
-      src="/series-logo.png"
-      alt="Global Lights Series Logo"
-      className="h-40 w-auto object-contain drop-shadow-lg"
-    />
-  </div>
-	<div className="relative container px-4 py-16">
-          <div className="flex items-center gap-3 text-white/90">
-            <Zap className="h-8 w-8" />
-            <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight">
-              Racing
-            </h1>
-          </div>
-          <p className="mt-2 max-w-2xl text-white/90">
-            I race in Ireland’s Global GT Light series, my car isn’t just quick — it’s Ka-chow! quick.
-            Built for speed, built for smiles.
-          </p>
+     <section className="relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-red-700 via-red-600 to-amber-500" />
+      <div className="absolute inset-0 bg-checkers mix-blend-overlay opacity-30" />
+
+      {/* show only on md+ so it won't overlap on phones */}
+      <div className="hidden md:block absolute top-6 right-6">
+        <img
+          src="/series-logo.png"
+          alt="Global Lights Series Logo"
+          className="h-40 w-auto object-contain drop-shadow-lg"
+        />
+      </div>
+
+      <div className="relative container px-4 py-16">
+        <div className="flex items-center gap-3 text-white/90">
+          <Zap className="h-8 w-8" />
+          <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight">Racing</h1>
         </div>
-        <div className="absolute -bottom-16 -right-16 rotate-12">
-          <div className="h-40 w-[140vw] bg-gradient-to-r from-amber-400 to-yellow-200 opacity-30 blur-2xl" />
-        </div>
-      </section>
+        <p className="mt-2 max-w-2xl text-white/90">
+          I race in Ireland’s Global GT Light series, my car isn’t just quick — it’s Ka-chow! quick.
+          Built for speed, built for smiles.
+        </p>
+      </div>
+
+      <div className="absolute -bottom-16 -right-16 rotate-12">
+        <div className="h-40 w-[140vw] bg-gradient-to-r from-amber-400 to-yellow-200 opacity-30 blur-2xl" />
+      </div>
+    </section>
 
       {/* CAR & SERIES */}
       <section className="container px-4 py-10 grid md:grid-cols-2 gap-6">
