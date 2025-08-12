@@ -15,16 +15,7 @@ export default function Twitch() {
       {/* HERO — mirrors Racing page, with Twitch colours */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#9146FF] via-[#A970FF] to-[#B9A3E3]" />
-        <div className="absolute inset-0 bg-checkers mix-blend-overlay opacity-20" />
-
-        {/* Logo top-right (hide on mobile) */}
-        <div className="hidden md:block absolute top-6 right-6">
-          <img
-            src="/twitch-logo.png"
-            alt="Twitch Logo"
-            className="h-20 w-auto object-contain drop-shadow-lg"
-          />
-        </div>
+        <div className="absolute inset-0 bg-checkers mix-blend-overlay opacity-20" /> 
 
         <div className="relative container px-4 py-16">
           <h1 className="text-3xl md:text-4xl font-extrabold text-white">Live on Twitch</h1>
