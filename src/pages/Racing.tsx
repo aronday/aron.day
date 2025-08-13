@@ -13,9 +13,9 @@ const GALLERY = [
 const SPONSORS = [
   {
     name: 'Aim Technologies',
-    logo: '/sponsors/sponsor1.png',   // put files in /public/sponsors/
+    logo: '/sponsors/sponsor1.svg',
     url: 'https://www.aimtechnologies.com/',
-    grayscale: true,                  // show in greyscale (hover reveals color)
+    grayscale: true,
   },
   {
     name: 'Precision Graphics',
