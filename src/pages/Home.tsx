@@ -7,7 +7,7 @@ const PROFILE = {
   title: "Customer Success Engineer @ Tines",
   location: "Dublin, Ireland",
   email: "hello@aron.day",
-  linkedin: "https://www.linkedin.com/in/aronday",
+  linkedin: "https://www.linkedin.com/in/dayaron",
   github: "https://github.com/aronday",
   hero: "/purple_bg.png",
   headshot: "/aron.jpg",
