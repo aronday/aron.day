@@ -112,7 +112,7 @@ export default function Racing() {
       <section className="bg-[#D22630] text-white py-3 px-4 shadow-lg">
       <div className="container flex flex-col sm:flex-row items-center justify-between gap-2">
         <p className="font-semibold text-sm sm:text-base">
-          🏁 Next Event: <span className="font-bold">500MRCI Race Meeting @ Kirkistown — Aug 30, 2025</span>
+          🏁 Next Event: <span className="font-bold">500MRCI @ Kirkistown — Aug 30, 2025</span>
         </p>
         <a
           href="https://kirkistown.com/event/500mrci-race-meeting-featuring-b-o-s-s-ireland/"
