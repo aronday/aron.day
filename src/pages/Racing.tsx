@@ -20,7 +20,7 @@ const SPONSORS = [
   {
     name: 'Precision Graphics',
     logo: '/sponsors/sponsor2.png',
-    url: 'https://precisiongraphics.ie',
+    url: 'https://precisiongraphics.loudbydesign.ie/',
     grayscale: true,
   },
 ]
@@ -73,32 +73,54 @@ export default function Racing() {
   return (
     <div>
       {/* HERO */}
-     <section className="relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-red-700 via-red-600 to-amber-500" />
-      <div className="absolute inset-0 bg-checkers mix-blend-overlay opacity-30" />
+      <section className="relative overflow-hidden">
+        {/* Background gradient + overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#B71C24] via-[#D22630] to-[#FFC107]" />
+        <div className="absolute inset-0 bg-checkers mix-blend-overlay opacity-30" />
 
-      {/* show only on md+ so it won't overlap on phones */}
-      <div className="hidden md:block absolute top-6 right-6">
-        <img
-          src="/series-logo.png"
-          alt="Global Lights Series Logo"
-          className="h-40 w-auto object-contain drop-shadow-lg"
-        />
-      </div>
+        <div className="relative container px-4 py-16">
+          {/* Flex column on mobile, row on desktop */}
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
+            {/* Series logo */}
+            <img
+              src="/series-logo.png"
+              alt="Global Lights Series Logo"
+              className="h-28 w-auto object-contain drop-shadow-lg relative z-10"
+            />
 
-      <div className="relative container px-4 py-16">
-        <div className="flex items-center gap-3 text-white/90">
-          <Zap className="h-8 w-8" />
-          <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight">Racing</h1>
+            {/* Text content */}
+            <div>
+              <div className="flex items-center gap-3 text-white/90">
+                <Zap className="h-8 w-8" />
+                <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight">Racing</h1>
+              </div>
+              <p className="mt-2 max-w-2xl text-white/90">
+                I race in Ireland’s Global GT Light series, my car isn’t just quick — it’s Ka-chow! quick.
+                Built for speed, built for smiles.
+              </p>
+            </div>
+          </div>
         </div>
-        <p className="mt-2 max-w-2xl text-white/90">
-          I race in Ireland’s Global GT Light series, my car isn’t just quick — it’s Ka-chow! quick.
-          Built for speed, built for smiles.
-        </p>
-      </div>
 
-      <div className="absolute -bottom-16 -right-16 rotate-12">
-        <div className="h-40 w-[140vw] bg-gradient-to-r from-amber-400 to-yellow-200 opacity-30 blur-2xl" />
+        {/* Decorative gradient streak */}
+        <div className="absolute -bottom-16 -right-16 rotate-12">
+          <div className="h-40 w-[140vw] bg-gradient-to-r from-amber-400 to-yellow-200 opacity-30 blur-2xl" />
+        </div>
+      </section>
+
+      {/* NEXT EVENT BANNER */}
+      <section className="bg-[#D22630] text-white py-3 px-4 shadow-lg">
+      <div className="container flex flex-col sm:flex-row items-center justify-between gap-2">
+        <p className="font-semibold text-sm sm:text-base">
+          🏁 Next Event: <span className="font-bold">500MRCI Race Meeting @ Kirkistown — Aug 30, 2025</span>
+        </p>
+        <a
+          href="https://kirkistown.com/event/500mrci-race-meeting-featuring-b-o-s-s-ireland/"
+          target="_blank"
+          className="inline-flex items-center gap-2 rounded-full bg-white text-[#D22630] text-sm px-4 py-1.5 font-semibold hover:bg-neutral-200 transition"
+        >
+          More Info →
+        </a>
       </div>
     </section>
 
@@ -133,7 +155,7 @@ export default function Racing() {
           <div className="absolute inset-0 bg-checkers opacity-10 pointer-events-none" />
           <div className="relative">
             <h3 className="text-white font-semibold flex items-center gap-2">
-              <Zap className="h-5 w-5 text-amber-300" /> Spec Sheet — Global Lights GT1 (Lightning Edition)
+              <Zap className="h-5 w-5 text-amber-300" /> Spec Sheet — Global GT Light
             </h3>
             <div className="mt-3 grid sm:grid-cols-2 gap-4 text-sm text-neutral-200">
               <div>
@@ -159,38 +181,60 @@ export default function Racing() {
       </section>
 
       {/* SPONSORS */}
-      <section className="container px-4 py-10">
-        <div className="rounded-2xl border border-neutral-800 bg-neutral-900/60 p-6">
-          <h3 className="text-white font-semibold">Partners & Sponsors</h3>
-          <p className="text-sm text-neutral-400 mt-1">
-            Huge thanks to the partners who help keep the wheels turning.
-          </p>
+     <section className="container px-4 py-8">
+        {/* Subtle heading */}
+        <h3 className="text-center text-neutral-500 font-semibold uppercase tracking-wider text-sm mb-5">
+          Partners
+        </h3>
 
-          <div className="mt-5 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-            {SPONSORS.map((s) => (
-              <a
-                key={s.name}
-                href={s.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-center justify-center rounded-xl border border-neutral-800 bg-neutral-950/40 p-4 hover:bg-neutral-900/60 transition"
-                aria-label={s.name}
-              >
-                <img
-                  src={s.logo}
-                  alt={s.name}
-                  className={[
-                    "max-h-12 w-auto object-contain transition",
-                    s.grayscale
-                      ? "grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100"
-                      : ""
-                  ].join(" ")}
-                />
-              </a>
-            ))}
-          </div>
+        {/* Logos grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+          {SPONSORS.map((s) => (
+            <a
+              key={s.name}
+              href={s.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={s.name}
+              className="group flex items-center justify-center rounded-xl border border-neutral-800 bg-neutral-950/40 p-4 hover:bg-neutral-900/60 transition"
+            >
+              <img
+                src={s.logo}
+                alt={s.name}
+                className={[
+                  "max-h-12 w-auto object-contain transition",
+                  s.grayscale
+                    ? "grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100"
+                    : ""
+                ].join(" ")}
+              />
+            </a>
+          ))}
         </div>
       </section>
+
+      {/* ONBOARD LAP VIDEO */}
+      <section className="container px-4 py-10">
+        <h3 className="text-white font-semibold flex items-center gap-2">
+          <Zap className="h-5 w-5 text-amber-300" /> Onboard Lap
+        </h3>
+        <p className="text-sm text-neutral-300 mt-2">
+          Jump in the driver’s seat for a lap around Mondello Park — feel the speed, hear the engine, and see why I love racing in the Global GT Lights series.
+        </p>
+
+        {/* 2.35:1 responsive container */}
+        <div className="mt-4 relative w-full" style={{ paddingTop: '42.55%' }}>
+          <iframe
+            src="https://www.youtube.com/embed/Dv195k29fcI?rel=0"
+            title="Onboard Lap"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="absolute top-0 left-0 w-full h-full rounded-xl border border-neutral-800 bg-black"
+          />
+        </div>
+      </section>
+
 
       {/* HIRE CTA */}
       <section className="container px-4 py-10">
