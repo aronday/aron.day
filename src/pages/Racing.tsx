@@ -10,6 +10,21 @@ const GALLERY = [
   { src: '/car_4.jpg', alt: 'Car at display event' },
 ]
 
+const SPONSORS = [
+  {
+    name: 'Aim Technologies',
+    logo: '/sponsors/sponsor1.png',   // put files in /public/sponsors/
+    url: 'https://www.aimtechnologies.com/',
+    grayscale: true,                  // show in greyscale (hover reveals color)
+  },
+  {
+    name: 'Precision Graphics',
+    logo: '/sponsors/sponsor2.png',
+    url: 'https://precisiongraphics.ie',
+    grayscale: true,
+  },
+]
+
 function Lightbox({
   image,
   onClose,
@@ -139,6 +154,40 @@ export default function Racing() {
                 </ul>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SPONSORS */}
+      <section className="container px-4 py-10">
+        <div className="rounded-2xl border border-neutral-800 bg-neutral-900/60 p-6">
+          <h3 className="text-white font-semibold">Partners & Sponsors</h3>
+          <p className="text-sm text-neutral-400 mt-1">
+            Huge thanks to the partners who help keep the wheels turning.
+          </p>
+
+          <div className="mt-5 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+            {SPONSORS.map((s) => (
+              <a
+                key={s.name}
+                href={s.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center justify-center rounded-xl border border-neutral-800 bg-neutral-950/40 p-4 hover:bg-neutral-900/60 transition"
+                aria-label={s.name}
+              >
+                <img
+                  src={s.logo}
+                  alt={s.name}
+                  className={[
+                    "max-h-12 w-auto object-contain transition",
+                    s.grayscale
+                      ? "grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100"
+                      : ""
+                  ].join(" ")}
+                />
+              </a>
+            ))}
           </div>
         </div>
       </section>
