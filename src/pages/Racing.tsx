@@ -13,7 +13,7 @@ const GALLERY = [
 const SPONSORS = [
   {
     name: 'Aim Technologies',
-    logo: '/sponsors/sponsor1.svg',
+    logo: '/sponsors/sponsor1.png',
     url: 'https://www.aimtechnologies.com/',
     grayscale: true,
   },
